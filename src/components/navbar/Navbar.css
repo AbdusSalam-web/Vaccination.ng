@@ -1,0 +1,27 @@
+.navbar {
+  @apply w-full bg-[#14174C];
+}
+@screen sm {
+  .navbar .container {
+    @apply px-[35px] py-[50px] pb-[32px] flex items-center justify-between;
+  }
+  .navbar .container .logo a {
+    @apply font-montserrat font-bold text-[18px] text-[#FFFFFF] relative;
+  }
+  .navbar .container .logo a:before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    @apply bg-brand;
+    border-radius: 4px;
+  }
+  .navbar .container .menuIcon {
+    @apply w-[45px] h-[45px] rounded-[10px] bg-[rgba(196,196,196,0.15)] flex items-center justify-center cursor-pointer shadow-[0px_4px_4px_rgba(0,0,0,0.15)];
+  }
+  .navbar .container .menuIcon svg {
+    @apply w-[30px] h-[30px] rotate-[270deg] text-[#FFFFFF];
+  }
+}/*# sourceMappingURL=Navbar.css.map */

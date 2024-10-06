@@ -1,0 +1,14 @@
+.vaccin {
+  @apply w-full bg-[#14174C];
+}
+@screen sm {
+  .vaccin .container {
+    @apply mx-[35px] pt-[50px] pb-[43px] flex justify-center relative;
+  }
+  .vaccin .container img {
+    @apply rounded-[20px];
+  }
+  .vaccin .container .imgl {
+    @apply absolute top-[50%] left-[10%] translate-x-[-50%];
+  }
+}/*# sourceMappingURL=Vaccin.css.map */
