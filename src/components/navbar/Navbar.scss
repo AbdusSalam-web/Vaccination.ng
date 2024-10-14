@@ -1,28 +1,26 @@
 .navbar {
-  @apply w-full bg-[#14174C];
-  @screen sm {
-    .container {
-      @apply px-[35px] py-[50px] pb-[32px] flex items-center justify-between;
-      .logo {
-        a {
-          @apply font-montserrat font-bold text-[18px] text-[#FFFFFF] relative;
-          &:before {
+  @apply w-full absolute top-0 left-0 ;
+  .container {
+    @apply w-full flex justify-between items-center px-[35px] pt-[50px] pb-[32px]  ;
+    .menu {
+      @apply  hidden gap-[80px] xl:flex;
+      ul {
+        @apply flex gap-[25px] items-center;
+        li {
+          a {
+            @apply font-montserrat font-medium text-[24px] text-[rgba(255,255,255,0.50)];
+        }
+        .active {
+          @apply font-bold text-[#FFFFFF] relative;
+          &::after {
             content: "";
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 80px;
-            height: 3px;
-            @apply bg-brand;
-            border-radius: 4px;
+            @apply absolute left-[50%] translate-x-[-50%] bottom-[-15px] w-[10px] h-[10px] rounded-full bg-brand;
           }
         }
-      }
-      .menuIcon {
-        @apply w-[45px] h-[45px] rounded-[10px] bg-[rgba(196,196,196,0.15)] flex items-center justify-center cursor-pointer shadow-[0px_4px_4px_rgba(0,0,0,0.15)];
-        svg {
-          @apply w-[30px] h-[30px] rotate-[270deg] text-[#FFFFFF];
         }
+      }
+      .btn {
+        @apply py-[20px] px-[26px] rounded-[20px] bg-[rgba(196,196,196,0.1)] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] font-montserrat font-bold text-[24px] text-brand transition-all duration-300 hover:shadow-transparent;
       }
     }
   }

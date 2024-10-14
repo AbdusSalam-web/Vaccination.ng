@@ -1,0 +1,38 @@
+.responsiveNav {
+    @apply relative;
+
+    svg {
+        @apply w-[45px] h-[45px] rounded-[10px] bg-[rgba(196,196,196,0.15)] text-[#FFFFFF] text-[35px] rotate-[270deg] xl:hidden;
+    }
+
+    .responsiveMenu {
+        @apply w-[250px] h-[220px] p-[20px] bg-brand rounded-[10px] absolute top-[120%] right-0 flex flex-col items-center gap-[20px] xl:hidden;
+        animation: responsiveMenu 1s;
+         ul {
+            li {
+                a {
+                    @apply w-full font-montserrat font-semibold text-lg text-[#FFFFFF] inline-block text-center;
+                }
+            }
+        }
+
+        .responsivebtn {
+            @apply w-[80%] text-white bg-gradient-to-r from-[#0D113F] via-[#0D113F] to-[#0D113F] hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-[#0D113F] dark:focus:ring-[#0D113F] font-semibold rounded-lg text-sm px-5 py-2.5 text-center 
+        }
+    }
+}
+   @keyframes responsiveMenu {
+       0% {
+           opacity: 0;
+           top: 100%;
+           height: 0;
+           overflow: hidden;
+       }
+
+       100% {
+           opacity: 1;
+           top: 120%;
+           height: 220px;
+           overflow: hidden;
+       }
+   }
