@@ -2,7 +2,10 @@
   @apply w-full absolute top-0 left-0;
 }
 .navbar .container {
-  @apply w-full flex justify-between items-center px-[35px] pt-[50px] pb-[32px];
+  @apply w-full flex justify-between items-center px-[70px] pt-[50px] pb-[32px];
+}
+.navbar .container .logo {
+  @apply w-[141px] md:w-[200px];
 }
 .navbar .container .menu {
   @apply hidden gap-[80px] xl:flex;

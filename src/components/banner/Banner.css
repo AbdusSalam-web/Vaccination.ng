@@ -1,3 +1,93 @@
 .banner {
-  @apply w-full  bg-cover bg-center pt-[210px] pb-[250px];
-}/*# sourceMappingURL=Banner.css.map */
+  @apply w-full bg-cover bg-center pt-[127px] pl-[35px] pr-[44px] md:pt-[126px] md:pl-[50px] lg:pt-[211px] lg:px-[70px] ;
+
+  .container {
+    .banner_row {
+      @apply flex justify-between flex-wrap gap-[50px] md:gap-[55px] lg:gap-0 lg:flex-nowrap;
+
+      h2 {
+        @apply font-montserrat font-bold text-[12px] text-brand md:text-[18px] lg:text-[24px];
+      }
+
+      h1 {
+        @apply w-[276px] md:w-[414px] lg:w-[551px] font-montserrat font-extrabold text-[24px] md:text-[36px] lg:text-[48px] text-[#FFFFFF] py-[20px] md:py-[40px] lg:py-[50px];
+
+        span {
+          @apply text-brand;
+        }
+      }
+
+      p {
+        @apply w-[276px] md:w-[502px] lg:w-[603px] font-montserrat font-bold text-[14px] md:text-[20px] lg:text-[24px] text-[rgba(255,255,255,0.7)] pb-[40px] lg:pb-[50px];
+      }
+
+      .bannerImage {
+        @apply relative;
+
+        .animationImageLeft {
+          @apply absolute top-[50%] translate-y-[-50%] left-0 w-[50px] md:w-[100px] rounded-[10px];
+          animation: bannerImageAnimation 3s linear infinite;
+        }
+
+        .animationImageRight {
+          @apply absolute top-[50%] translate-y-[-50%] right-0 translate-x-[50%] w-[50px] md:w-[100px];
+          animation: bannerImageAnimation 3s linear infinite;
+        }
+      }
+    }
+
+    .schedule {
+      div {
+        @apply flex gap-[10px] md:gap-[20px] items-center mt-[43px] md:mt-[39px] pb-[20px] lg:mt-[120px];
+
+        svg {
+          @apply w-[30px] md:w-[50px] h-[30px] md:h-[50px] p-[5px] rounded-[10px] bg-[rgba(196,196,196,0.1)] text-brand;
+        }
+
+        p {
+          @apply font-montserrat font-bold text-[14px] md:text-[24px] text-[#FFFFFF];
+        }
+      }
+    }
+
+    .address {
+      @apply pt-[11px] bg-[rgba(196,196,196,0.05)] rounded-tl-[20px] rounded-tr-[20px] md:w-[668px] lg:w-[1150px] ;
+
+      >div {
+        @apply bg-[rgba(196,196,196,0.1)] rounded-tl-[20px] rounded-tr-[20px] pt-[20px] md:pt-[37px] pl-[10px] pb-[10px] md:pb-[45px] flex flex-col gap-[15px] md:pl-[12px] md:grid md:grid-cols-2 md:grid-rows-2 md:gap-[41px] lg:flex lg:flex-row lg:w-full ;
+        div {
+          @apply flex flex-row gap-[10px] md:gap-[20px] items-center;
+          svg{
+            @apply w-[30px] h-[30px] md:w-[50px] md:h-[50px] p-[5px] rounded-[10px] bg-[rgba(196,196,196,0.1)] text-brand;
+          }
+          div{
+            @apply flex flex-col gap-0 items-start;
+            p{
+              @apply font-montserrat font-bold text-[14px] md:text-[20px] lg:text-[24px] text-[rgb(255,255,255)];
+              &:nth-child(1) {
+                  @apply font-montserrat font-semibold text-[14px] md:text-[20px] lg:text-[24px] text-[rgba(255,255,255,0.5)]; 
+                }
+            }
+            
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes bannerImageAnimation {
+  0% {
+    top: 50%;
+  }
+
+  50% {
+    top: 45%;
+  }
+
+  100% {
+    top: 50%;
+  }
+}
+
+/*# sourceMappingURL=Banner.css.map */
